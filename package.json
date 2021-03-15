@@ -4,7 +4,7 @@
   "description": "\"Task 1\"",
   "main": "index.js",
   "scripts": {
-    "task1": "nodemon ./index.js localhost 8080"
+    "task1": "nodemon ./task1.js localhost 8080"
   },
   "author": "",
   "license": "ISC",
