@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-task1",
+  "version": "1.0.0",
+  "description": "\"Task 1\"",
+  "main": "index.js",
+  "scripts": {
+    "task1": "nodemon ./index.js localhost 8080"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
