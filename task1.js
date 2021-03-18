@@ -10,7 +10,7 @@ function reverseStr(inputStr) {
     return inputStr.split("").reverse().join("");
 }
 
-function ask() {
+export function ask() {
     rl.question('', (answer) => {
         console.log(`${reverseStr(answer)}`);
         ask();

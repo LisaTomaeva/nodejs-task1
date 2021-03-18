@@ -14,16 +14,20 @@ if (fs.existsSync(txtFile)) {
 	}
 }
 
-csv().fromFile(csvFilePath)
-.on('error', (err) => {
-	console.log(err)
-})
-.on('data',(l)=>{
-	const jsonStr= l.toString('utf8')
-    console.log(jsonStr)
-	try {
-		fs.appendFileSync(txtFile, l.toString() + "\n")
-	} catch(e) {
-		console.log(e)
-	}
-})
+export const writeToTxt = () => {
+	csv().fromFile(csvFilePath)
+	.on('error', (err) => {
+		console.log(err)
+	})
+	.on('data',(l)=>{
+		const jsonStr= l.toString('utf8')
+		console.log(jsonStr)
+		try {
+			fs.appendFileSync(txtFile, l.toString() + "\n")
+		} catch(e) {
+			console.log(e)
+		}
+	})
+}
+
+writeToTxt();
