@@ -5,14 +5,14 @@ const csvFilePath='./csv/books.csv';
 const txtFile='./books.txt';
 const csv=require('csvtojson');
 
-try {
-	if (fs.statSync(txtFile)) { 
+if (fs.existsSync(txtFile)) {
+	console.log('The path exists.');
+	try {		
 		fs.unlinkSync(txtFile)
-	  } 
-} catch(err) {
-	console.log(err)
+	} catch(err) {
+		console.log(err)
+	}
 }
-
 
 csv().fromFile(csvFilePath)
 .on('error', (err) => {
