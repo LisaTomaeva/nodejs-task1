@@ -1,2 +1,11 @@
+- npm i
+
 To run task 1:
 - npm run task1
+
+To run task 2:
+- npm run task2
+
+To run task 3 (changes with export and babel):
+- npm run task1
+- npm run task2
